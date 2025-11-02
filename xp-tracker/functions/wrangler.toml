@@ -1,6 +1,0 @@
-name = "xp-tracker"
-main = "functions/xp.js"
-compatibility_date = "2025-11-02"
-
-# Uncomment and update if you want to use your own domain
-# routes = [{ pattern = "https://xp.yourdomain.com/*", zone_name = "yourdomain.com" }]

@@ -1,0 +1,56 @@
+.progress-container {
+  width: 80%;
+  height: 50px;
+  background: #000011aa;
+  margin: 0 auto;
+  position: relative;
+  overflow: hidden;
+  box-shadow: none;
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+}
+
+.progress-container::before {
+  content: "";
+  pointer-events: none;
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: transparent;
+  box-sizing: border-box;
+  z-index: 15;
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+  box-shadow:
+    0 0 0 6px rgba(255, 255, 255, 0.8),      /* solid-ish white border */
+    0 0 14px 6px #8ccdfe,                    /* bright blue glow */
+    0 0 40px 18px #67b3ffcc;                 /* softer outer glow */
+}
+
+.progress-bar {
+  height: 100%;
+  width: 50%; /* example fill */
+  position: relative;
+  transition: width 0.4s ease;
+  z-index: 1;
+  background: linear-gradient(
+    to bottom,
+    #599adb 0%,
+    #497fb6 50%,    /* darker middle */
+    #599adb 100%
+  );
+  box-shadow: inset 0 0 8px #9cc6ffaa;
+}
+
+.progress-text {
+  position: absolute;
+  top: 0; left: 0; width: 100%; height: 100%;
+  display: flex; align-items: center; justify-content: center;
+  color: white;
+  font-size: 28px;
+  font-family: 'Handel Gothic', Arial, sans-serif;
+  font-weight: normal;
+  pointer-events: none;
+  text-align: center;
+  line-height: 60px;
+  z-index: 20;
+}
